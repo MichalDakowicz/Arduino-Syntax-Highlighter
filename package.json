@@ -1,0 +1,37 @@
+{
+    "name": "arduino-syntax-highlighter",
+    "displayName": "Arduino Syntax Highlighter",
+    "publisher": "Michu",
+    "description": "Provides syntax highlighting for Arduino code in Visual Studio Code",
+    "version": "0.0.1",
+    "icon": "images/ArduinoCommunityLogo.png",
+    "engines": {
+      "vscode": "^1.85.0"
+    },
+    "categories": [
+      "Programming Languages"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MichalDakowicz/Arduino-Syntax-Highlighter"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "arduino",
+            "extensions": [ ".ino", ".pde" ],
+            "aliases": [ "Arduino", "arduino" ],
+            "configuration": "./arduino.configuration.json"
+        }],
+        "grammars": [{
+            "language": "arduino",
+            "path": "./syntaxes/arduino.tmLanguage",
+            "scopeName": "source.c++.arduino"
+        }],
+        "snippets": [
+            {
+                "language": "arduino",
+                "path": "./snippets/arduino.json"
+            }
+        ]
+    }
+}
