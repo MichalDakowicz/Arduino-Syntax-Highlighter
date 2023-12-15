@@ -3,7 +3,7 @@
     "displayName": "Arduino Syntax Highlighter",
     "publisher": "Michu",
     "description": "Provides syntax highlighting for Arduino code in Visual Studio Code",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "icon": "images/ArduinoCommunityLogo.png",
     "engines": {
       "vscode": "^1.85.0"

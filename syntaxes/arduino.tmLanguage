@@ -55,19 +55,19 @@
             </dict>
             <dict>
                 <key>match</key>
-                <string>\b(boolean|byte|word|void|int|long|float|double|char|unsigned)\b</string>
+                <string>\b(boolean|byte|word|void|int|long|float|double|char|unsigned|bool|while|for)\b</string>
                 <key>name</key>
                 <string>storage.c++.arduino</string>
             </dict>
             <dict>
                 <key>match</key>
-                <string>\b(abs|acos|asin|atan|atan2|ceil|constrain|cos|degrees|exp|floor|log|map|max|min|radians|random|randomSeed|round|sin|sq|sqrt|tan|bitRead|bitWrite|bitSet|bitClear|bit|highByte|lowByte|analogReference|analogRead|analogWrite|attachInterrupt|detachInterrupt|delay|delayMicroseconds|digitalWrite|digitalRead|interrupts|millis|micros|noInterrupts|noTone|pinMode|pulseIn|shiftOut|tone|begin|end|read|print|println|available|flush|setup|loop|digitalPinToInterrupt|analogInPinToBit|digitalPinHasPWM|digitalPinToPort|digitalPinToBitMask|digitalPinToTimer|analogOutPinToBit|analogInPinToChannel|digitalPinToAnalogIn)\b</string>
+                <string>\b(abs|acos|asin|atan|atan2|ceil|constrain|cos|degrees|exp|floor|log|map|max|min|radians|random|randomSeed|round|sin|sq|sqrt|tan|bitRead|bitWrite|bitSet|bitClear|bit|highByte|lowByte|analogReference|analogRead|analogWrite|attachInterrupt|detachInterrupt|delay|delayMicroseconds|digitalWrite|digitalRead|interrupts|millis|micros|noInterrupts|noTone|pinMode|pulseIn|shiftOut|tone|begin|end|read|print|println|available|flush|setup|loop|digitalPinToInterrupt|analogInPinToBit|digitalPinHasPWM|digitalPinToPort|digitalPinToBitMask|digitalPinToTimer|analogOutPinToBit|analogInPinToChannel|digitalPinToAnalogIn|readString|readStringUntil)\b</string>
                 <key>name</key>
                 <string>support.function.c++.arduino</string>
             </dict>
             <dict>
                 <key>match</key>
-                <string>\b(Serial\d?|String|Stream|File|Wire|SPI|EEPROM)\b</string>
+                <string>\b(Serial\d?|String|Stream|File|Wire|SPI|EEPROM|const)\b</string>
                 <key>name</key>
                 <string>support.class.c++.arduino</string>
             </dict>
@@ -76,6 +76,66 @@
                 <string>\b(private|protected|public)\b</string>
                 <key>name</key>
                 <string>storage.modifier.c++.arduino</string>
+            </dict>
+            <dict>
+                <key>match</key>
+                <string>\b(Serial.begin|Serial.available|Serial.read|Serial.print|Serial.println|Serial.readString|Serial.readStringUntil)\b</string>
+                <key>name</key>
+                <string>support.function.c++.arduino</string>
+            </dict>
+            <dict>
+                <key>match</key>
+                <string>\b(delayMicroseconds|micros|millis|exit)\b</string>
+                <key>name</key>
+                <string>support.function.timing.c++.arduino</string>
+            </dict>
+            <dict>
+                <key>match</key>
+                <string>\b(digitalPinToPCICR|digitalPinToPCICRbit|digitalPinToPCMSK|digitalPinToPCMSKbit)\b</string>
+                <key>name</key>
+                <string>support.function.pcinterrupt.c++.arduino</string>
+            </dict>
+            <dict>
+                <key>match</key>
+                <string>\b(attachPCINT|detachPCINT)\b</string>
+                <key>name</key>
+                <string>support.function.pcinterrupt.c++.arduino</string>
+            </dict>
+            <dict>
+                <key>match</key>
+                <string>\b(__FlashStringHelper|F)\b</string>
+                <key>name</key>
+                <string>support.class.flashstring.c++.arduino</string>
+            </dict>
+            <dict>
+                <key>match</key>
+                <string>\b(LOW_BYTE|HIGH_BYTE|ARDUINO_ARCH_AVR|ARDUINO_ARCH_SAM)\b</string>
+                <key>name</key>
+                <string>constant.c++.arduino</string>
+            </dict>
+            <dict>
+                <key>match</key>
+                <string>\b(true|false)\b</string>
+                <key>name</key>
+                <string>constant.c++.arduino</string>
+            </dict>
+            <dict>
+                <key>match</key>
+                <string>"(?:[^"\\]|\\.)*"</string>
+                <key>name</key>
+                <string>string.quoted.double.c++.arduino</string>
+            </dict>
+            <dict>
+                <key>match</key>
+                <string>'(?:[^'\\]|\\.)*'</string>
+                <key>name</key>
+                <string>string.quoted.double.c++.arduino</string>
+            </dict>
+            <dict>
+                <key>match</key>
+                <string>\b(\d+(\.\d*)?|\.\d+)\b</string>
+                <key>name</key>
+                <string>constant.numeric.c++.arduino</string>
             </dict>
         </array>
         <key>scopeName</key>

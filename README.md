@@ -1,1 +1,1 @@
-##Arduino extension for Visual Studio Code
+Arduino syntax highlighter for VS Code
